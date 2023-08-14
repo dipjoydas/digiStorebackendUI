@@ -20,7 +20,7 @@ const LogIn = () => {
         // ---------------------------------------------------------------------------
         try {
             const userInfo = { email, password }
-            const res = await fetch("http://localhost:5000/adminlogin", {
+            const res = await fetch("https://digi-storebackend.vercel.app/adminlogin", {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json"

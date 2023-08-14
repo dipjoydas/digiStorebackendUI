@@ -149,7 +149,7 @@ useEffect(()=>{
         const operation =async ()=>{
             try{
                 if(img){
-                    const res = await fetch(`http://localhost:5000/getimage/${img}`)
+                    const res = await fetch(`https://digi-storebackend.vercel.app/getimage/${img}`)
                 const image = await res.blob()
 
                 // setImgc(URL.createObjectURL(image))
@@ -162,7 +162,7 @@ useEffect(()=>{
             }
             // if(img){
 
-            //     const res = await fetch(`http://localhost:5000/getimage/${img}`)
+            //     const res = await fetch(`https://digi-storebackend.vercel.app/getimage/${img}`)
             // const image = await res.blob()
             // console.log(image)
             // // setImgc(URL.createObjectURL(image))
@@ -178,7 +178,7 @@ useEffect(()=>{
 
 
    useEffect(()=>{
-    fetch(`http://localhost:5000/getproducts${path.replace('/products','')}${location.search}`).
+    fetch(`https://digi-storebackend.vercel.app/getproducts${path.replace('/products','')}${location.search}`).
     then(res=>res.json()).
     then(data=>setProducts(data.product))
 
@@ -191,7 +191,7 @@ const handleSearch = async (e)=>{
      const inputValue = text.current.value.trim()
      try{
         
-            const res = await fetch(`http://localhost:5000/product/${inputValue}`)
+            const res = await fetch(`https://digi-storebackend.vercel.app/product/${inputValue}`)
             const result = await res.json();
             // console.log(result,"result")
             setSearch(result)
@@ -207,7 +207,7 @@ const handleUpdate =async(id)=> {
     
     try{
         
-        const res = await fetch(`http://localhost:5000/product/${id}`)
+        const res = await fetch(`https://digi-storebackend.vercel.app/product/${id}`)
         const result = await res.json();
         setUpdateItem(result)
  }catch (error){
@@ -230,7 +230,7 @@ const handleForm =async(e)=>{
     const formData = new FormData();   
     formData.append("image",imgc)
     try{
-        const response = await fetch(`http://localhost:5000/updateimage/${img}`, {
+        const response = await fetch(`https://digi-storebackend.vercel.app/updateimage/${img}`, {
         method:"PUT",
         headers: {
             "Authentication": Authentication 
@@ -292,7 +292,7 @@ let description =''
 
     }
     // now  update the product 
-    const UpdatePrduct = await fetch(`http://localhost:5000/updateproduct/${_id}`,{
+    const UpdatePrduct = await fetch(`https://digi-storebackend.vercel.app/updateproduct/${_id}`,{
         method:"PUT",
         headers:{
             "Content-Type": "application/json",
@@ -324,7 +324,7 @@ const [fPIds,setFPIds] =useState()
 
 useEffect(()=>{
     const getFPIds =async()=>{
-        const res = await fetch('http://localhost:5000/featuresproduct')
+        const res = await fetch('https://digi-storebackend.vercel.app/featuresproduct')
         const result = await res.json()
         setFPIds(result)
 
@@ -364,7 +364,7 @@ const handleRemovingFeaturesProcduct = (e)=>{
 const confirmFeatureProducts =async()=>{
     if(featuresProductArray.length != 0){
         try{
-            const res = await fetch(`http://localhost:5000/addfeaturesprodct`,{
+            const res = await fetch(`https://digi-storebackend.vercel.app/addfeaturesprodct`,{
                 method:"POST",
                 headers:{
                     "Content-Type": "application/json",
@@ -383,7 +383,7 @@ const confirmFeatureProducts =async()=>{
     }
     if(removeFeaturesProductArray.length !=0){
         try{
-            const res = await fetch(`http://localhost:5000/removefeaturesprodct`,{
+            const res = await fetch(`https://digi-storebackend.vercel.app/removefeaturesprodct`,{
                 method:"DELETE",
                 headers:{
                     "Content-Type": "application/json",

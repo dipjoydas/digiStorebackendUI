@@ -55,7 +55,7 @@ const Addproduct = () => {
         formData.append("image", img)
 
         try {
-            const response = await fetch("http://localhost:5000/addimage", {
+            const response = await fetch("https://digi-storebackend.vercel.app/addimage", {
                 method: "POST",
                 headers: {
                     "Authentication": Authentication
@@ -128,7 +128,7 @@ const Addproduct = () => {
             }
 
             // now  add the product 
-            const addPrduct = await fetch("http://localhost:5000/addproduct", {
+            const addPrduct = await fetch("https://digi-storebackend.vercel.app/addproduct", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

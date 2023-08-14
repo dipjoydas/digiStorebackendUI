@@ -7,11 +7,11 @@ const FeaturesCategories = () => {
     
     useEffect(()=>{
 
-    //     fetch('http://localhost:5000/homeslider')
+    //     fetch('https://digi-storebackend.vercel.app/homeslider')
     //   .then(response => response.json())
     //   .then(data => setImages(data))
 
-      fetch('http://localhost:5000/featurescategory')
+      fetch('https://digi-storebackend.vercel.app/featurescategory')
       .then(response => response.json())
       .then(data => setCategory(data))
      

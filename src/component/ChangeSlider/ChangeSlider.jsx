@@ -43,7 +43,7 @@ const ChangeSlider = () => {
       formData.append(`images`, file);
     });
     try {
-      const res = await fetch(`http://localhost:5000/${pathName}`, {
+      const res = await fetch(`https://digi-storebackend.vercel.app/${pathName}`, {
         method: "POST",
         headers:{
           "Authentication": Authentication

@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
     const location =useLocation()
     const Authentication = JSON.parse(localStorage.getItem("token"))
     if(Boolean(Authentication) && loading){
-        return <div>loading...</div>
+        return <div>loading</div>
     }else {
         if(Boolean(user?.email)){
             return children

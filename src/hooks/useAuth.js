@@ -18,7 +18,7 @@ const useAuth = () => {
 
                     const getUser = async () => {
                         // const Authentication = JSON.parse(localStorage.getItem("token"))
-                        const res = await fetch("http://localhost:5000/getadmin", {
+                        const res = await fetch("https://digi-storebackend.vercel.app/getadmin", {
                             method: "GET",
                             headers: {
                                 "Authentication": Authentication
@@ -53,7 +53,7 @@ const useAuth = () => {
       // ---------------------------------------log out ------------------------------------------------------------------------------
       const logOut = async () => {
         const Authentication = JSON.parse(localStorage.getItem("token"))
-        const res = await fetch("http://localhost:5000/adminlogout", {
+        const res = await fetch("https://digi-storebackend.vercel.app/adminlogout", {
             method: "GET",
             headers: {
                 "Authentication": Authentication

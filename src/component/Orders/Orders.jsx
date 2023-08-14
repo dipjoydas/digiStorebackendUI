@@ -6,7 +6,7 @@ const Orders = () => {
     useEffect(() => {
         const orderFetch = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/getfilterorders`,{
+                const response = await fetch(`https://digi-storebackend.vercel.app/getfilterorders`,{
                     headers:{
                         "Content-Type": "application/json",
                         "Authentication": Authentication 
@@ -27,7 +27,7 @@ const Orders = () => {
     const updateorder = async (id) => {
 
         try {
-            const res = await fetch(`http://localhost:5000/updateorderbackend/${id}`, {
+            const res = await fetch(`https://digi-storebackend.vercel.app/updateorderbackend/${id}`, {
                 method: "PUT",
                 headers:{
                     "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const Orders = () => {
         if ((startTime.current.value != '') && (endTime.current.value != '')) {
 
             try {
-                const response = await fetch(`http://localhost:5000/getfilterorders?startdate=${startTime.current.value}&enddate=${endTime.current.value}&delivered=${deliverd}`,{
+                const response = await fetch(`https://digi-storebackend.vercel.app/getfilterorders?startdate=${startTime.current.value}&enddate=${endTime.current.value}&delivered=${deliverd}`,{
                     headers:{
                         "Content-Type": "application/json",
                         "Authentication": Authentication 
@@ -73,7 +73,7 @@ const Orders = () => {
         }
         if ((startTime.current.value == '') && (endTime.current.value == '')) {
             try {
-                const response = await fetch(`http://localhost:5000/getfilterorders?delivered=${deliverd}`,{
+                const response = await fetch(`https://digi-storebackend.vercel.app/getfilterorders?delivered=${deliverd}`,{
                     headers:{
                         "Content-Type": "application/json",
                         "Authentication": Authentication 

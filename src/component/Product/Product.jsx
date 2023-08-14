@@ -9,7 +9,7 @@ const Product = ({ data, handleAddingFeaturesProduct, fPIds,handleRemovingFeatur
     const handleDelete = async (id) => {
         if (window.confirm('Are you really want to delete')) {
             try {
-                const res = await fetch(`http://localhost:5000/product/delete/`, {
+                const res = await fetch(`https://digi-storebackend.vercel.app/product/delete/`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const Product = ({ data, handleAddingFeaturesProduct, fPIds,handleRemovingFeatur
     return (
         // <div className='productContainer' onClick={props.anfunc}>
         <div className='productContainer' >
-            <img src={`http://localhost:5000/getimage/${img}`} alt="" />
+            <img src={`https://digi-storebackend.vercel.app/getimage/${img}`} alt="" />
             <h3>{title}</h3>
             <span>code : {_id}</span>
             <ul>

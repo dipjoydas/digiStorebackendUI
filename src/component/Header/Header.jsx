@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <div className='header'>
             <ul>
-                <li><Link to="/">Add Product</Link></li>
+                <li><Link to="/addproduct">Add Product</Link></li>
                 <li><Link to="/changepassword">Change password</Link></li>
                 <li><Link to="/changeslider">changeslider</Link></li>
                 <li><Link to="/addfeaturescategory">addfeaturescategory</Link></li>

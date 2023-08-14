@@ -24,7 +24,7 @@ const FeaturesCategory = () => {
         const formData = new FormData();
         formData.append("image",img)
         
-            const response = await fetch("http://localhost:5000/addfeaturescategoryimage", {
+            const response = await fetch("https://digi-storebackend.vercel.app/addfeaturescategoryimage", {
             method:"POST",
             headers:{
                 "Authentication": Authentication 
@@ -38,7 +38,7 @@ const FeaturesCategory = () => {
             img:result
         }
         // now add features category ---------------------------------------
-        const fC = await fetch("http://localhost:5000/addfeaturescategory",{
+        const fC = await fetch("https://digi-storebackend.vercel.app/addfeaturescategory",{
             method:"POST",
             headers:{
                 "Content-Type": "application/json",

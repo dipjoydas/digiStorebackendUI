@@ -9,7 +9,7 @@ const FeaturedCategory = (props) => {
     const handleDelete =async()=>{
         if(window.confirm('Are you really want to delete')){
             try{
-                const res = await fetch(`http://localhost:5000/fcategory/delete/`,{
+                const res = await fetch(`https://digi-storebackend.vercel.app/fcategory/delete/`,{
                     method:"DELETE",
                     headers:{
                         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const FeaturedCategory = (props) => {
     }
     return (
         <div className='category'>
-            <img src={`http://localhost:5000/getfcimage/${img}`} alt="" />
+            <img src={`https://digi-storebackend.vercel.app/getfcimage/${img}`} alt="" />
             <p><Link to={`/${url}`}>{des}</Link> </p>
             <button onClick={()=>handleDelete()}>delete</button>
             
