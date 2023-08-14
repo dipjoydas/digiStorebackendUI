@@ -1,0 +1,13 @@
+.imgContainer {
+    width: 300px;
+}
+.ChangeSliderContainer {
+    display: flex;
+    justify-content: center;
+}
+.ChangeSliderContainer input {
+    visibility: hidden;
+}
+input[type=submit]{
+    visibility: visible;
+}

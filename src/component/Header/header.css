@@ -1,0 +1,23 @@
+.header ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid red 2px;
+    list-style: none;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    background-color: black;
+}
+li {
+    width: 120px;
+    /* border: solid blue 1px; */
+    margin: .4rem;
+    
+}
+li * {
+    color: white;
+    text-decoration: none;
+}
+button {
+    color: black;
+}

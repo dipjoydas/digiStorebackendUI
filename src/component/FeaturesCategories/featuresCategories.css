@@ -1,0 +1,9 @@
+.featuresCategoryContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.featuresCategoryContainer * {
+    max-width: 150px;
+}

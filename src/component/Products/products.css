@@ -1,0 +1,10 @@
+.searchContainer {
+    text-align: center;
+}
+
+.productsContainer {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
