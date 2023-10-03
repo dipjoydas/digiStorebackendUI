@@ -49,7 +49,7 @@ const Product = ({ data, handleAddingFeaturesProduct, fPIds,handleRemovingFeatur
                 <button className='delete' onClick={() => handleDelete(_id)}>Delete</button>
                 <button className='update ' onClick={() => handleUpdate(_id)}>Update</button>
                 {
-                    isFeaturesProuct ? <>
+                    isFeaturesProuct? <>
                         <input type="checkbox"  name="" value={_id}  className='removingfP' onClick={(e)=>handleRemovingFeaturesProcduct(e)} />
                         <label htmlFor=""> remove   Features Product</label>
                     </> : <div>

@@ -11,6 +11,7 @@ const Products = () => {
     const [updateItem , setUpdateItem] = useState({})
     
     const location = useLocation()
+    // console.log(location,'location')
     const text = useRef('')
     // --------------------------------------------------------------------------------------------------------------------------------------------
     const [categories , setCategories] = useState([])
@@ -178,12 +179,16 @@ useEffect(()=>{
 
 
    useEffect(()=>{
-    fetch(`https://digi-storebackend.vercel.app/getproducts${path.replace('/products','')}${location.search}`).
+    fetch(`https://digi-storebackend.vercel.app/getproducts${location?.pathname?.replace('/products','')}${location.search}`).
     then(res=>res.json()).
-    then(data=>setProducts(data.product))
+    then(data=>{
+        
+        setProducts(data.product)})
+       
 
     
    },[])
+  
 //    handle search //////////////////////////////////////////////////////
 
 const handleSearch = async (e)=>{
@@ -323,15 +328,21 @@ let description =''
 const [fPIds,setFPIds] =useState()
 
 useEffect(()=>{
+    const featuresProductIds =[]
     const getFPIds =async()=>{
         const res = await fetch('https://digi-storebackend.vercel.app/featuresproduct')
         const result = await res.json()
-        setFPIds(result)
+        result.map(item=>{
+            featuresProductIds.push(item._id)
+        })
+
+        setFPIds(featuresProductIds)
 
 
     } 
     getFPIds()
 },[])
+
 const featuresProductArray =[]
 const handleAddingFeaturesProduct = (e)=>{
     const id = e.target.value 

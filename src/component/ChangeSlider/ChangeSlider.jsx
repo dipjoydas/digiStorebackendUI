@@ -51,6 +51,8 @@ const ChangeSlider = () => {
         body: formData
       })
       const result = await res.json()
+      // 
+      window.alert(result?.result)
 
     } catch (error) {
       console.log(error)

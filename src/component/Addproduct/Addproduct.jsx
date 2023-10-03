@@ -229,7 +229,7 @@ const Addproduct = () => {
                     <legend>Specification</legend>
                     {
                         specificationHeading.map((heading, index) =>
-                            <div className='specificationHeading'>
+                            <div key={index} className='specificationHeading'>
                                 <input type="text" name="" id="" placeholder='heading' />
                                 {
                                     heading.map(i =>

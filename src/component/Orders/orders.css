@@ -1,0 +1,36 @@
+/* tdb {
+    border: solid grey .5px;
+} */
+
+ td,th{
+    /* border: 1px solid black ; */
+    border-top: .5px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3) ;
+    border-collapse: collapse;
+    
+}
+
+th , td {
+    /* padding: .8rem ; */
+}
+
+table {
+    width: 100vw;
+    padding: 14px;
+    /* background-color: white; */
+}
+
+
+th {
+    text-align: center;
+    font-size: 1.6rem;
+    /* border-radius: .5rem; */
+    color: white;
+    background-color: black;
+}
+tr {
+    font-size: 1.4rem;
+}
+/* tr:hover {
+    background-color: #FAFBFC;
+} */

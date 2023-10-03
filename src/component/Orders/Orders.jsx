@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import './orders.css'
 
 const Orders = () => {
     const Authentication = JSON.parse(localStorage.getItem("token"))
@@ -9,8 +10,10 @@ const Orders = () => {
                 const response = await fetch(`https://digi-storebackend.vercel.app/getfilterorders`,{
                     headers:{
                         "Content-Type": "application/json",
-                        "Authentication": Authentication 
+                        // mode: 'no-cors'
+                        
                     },
+                    
                 })
                 const result = await response.json()
 
@@ -99,11 +102,12 @@ const Orders = () => {
                 <form action="" onSubmit={handleFilter}>
                     {/* <input ref={startTime} type="date" name="" id="" />  */}
                     <input ref={startTime} type="datetime-local" name="" id="" />
-                    <input ref={endTime} type="datetime-local" name="" id="" />
                     To
+                    <input ref={endTime} type="datetime-local" name="" id="" />
+                   
                     {/* <input ref={endTime} type="date" name="" id="" /> */}
-                    <label htmlFor="delivered">delivered</label>
-                    <input ref={deliverd} type="checkbox" name="" id="deliverd" />
+                   <div style={{display:"inline-block", padding:"0 10px ", position:"relative"}}> <label htmlFor="delivered" style={{position:"relative"}}>delivered</label>
+                    <input ref={deliverd} type="checkbox" name="" id="deliverd" style={{position:"relative" ,left:"-124px"}} /></div>
                     <button>Filter</button>
 
                 </form>
@@ -112,9 +116,9 @@ const Orders = () => {
             {/*-------------------------- orders part --------------------------------------------- */}
             {
                 orders?.map((order, index) =>
-                    <div key={index} style={{ border: "solid red 1px", padding: "20px" }}>
-                        <thead>
-                            <tr>
+                    <table key={index}  >
+                        <thead >
+                            <tr >
                                 <th>Personal Info</th>
                                 <th>Order</th>
                                 <th>status</th>
@@ -167,7 +171,7 @@ const Orders = () => {
                         </tbody>
 
 
-                    </div>
+                    </table>
                 )
             }
         </div>

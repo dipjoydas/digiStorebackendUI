@@ -1,8 +1,13 @@
+:root {
+    --header1Bg:#081621 ;
+    --header1FontColor:black
+
+}
 .header ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: solid red 2px;
+ 
     list-style: none;
     padding: 1rem 0;
     flex-wrap: wrap;
@@ -20,4 +25,30 @@ li * {
 }
 button {
     color: black;
+}
+
+.header1 {
+    height: 8rem;
+   
+    
+}
+.header1 {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: var(--header1Bg);
+   
+}
+.link {
+    font-size: 1.5rem;
+    color: var(--header1FontColor);
+    padding: 0 10px;
+    font-weight: bold ;
+
+}
+@media all and (max-width:1200px){
+    .header .header1 {
+        display: none;
+
+    }
 }

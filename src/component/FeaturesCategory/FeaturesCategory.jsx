@@ -47,7 +47,21 @@ const FeaturesCategory = () => {
             body:JSON.stringify(FeaturesCategory)
         }
         )
-        const fCresult = await res.json()
+        const fCresult = await fC.json()
+       
+        if(Boolean(fCresult._id)){
+            window.alert('added')
+           const inputs = document.getElementsByTagName('input')
+           for(let input of inputs){
+            input.value = ''
+           }
+           setImg('')
+
+        }else{
+            window.alert('please try again')
+        }
+    
+        
 
 
 

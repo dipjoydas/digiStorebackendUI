@@ -23,7 +23,8 @@ const LogIn = () => {
             const res = await fetch("https://digi-storebackend.vercel.app/adminlogin", {
                 method: "POST",
                 headers: {
-                    "content-Type": "application/json"
+                    "content-Type": "application/json",
+                
                 },
                 body: JSON.stringify(userInfo)
             }
